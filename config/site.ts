@@ -11,11 +11,11 @@ export const siteConfig = {
     },
     {
       title: "构建智能体",
-      href: "/detail",
+      href: "/",
     }
   ],
   links: {
-    github: "https://github.com/wangfengyuan/frontend-nav",
+    github: "https://github.com/lik778/web-island",
     docs: "",
   },
 }
