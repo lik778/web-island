@@ -8,9 +8,24 @@ import { cn } from "@/lib/utils"
 import { getCurrentUser } from "@/lib/session"
 import { UserAccountNav } from "./user-account-nav"
 import { SidebarProps } from "./sidebar"
+import React, { useEffect, useState } from "react"
 
-export async function SiteHeader({ navItems }: SidebarProps) {
-  const user = await getCurrentUser()
+interface User  {
+  name?: string | null;
+  email?: string | null;
+  image?: string | null;
+}
+
+export function SiteHeader({ navItems }: SidebarProps) {
+  const [user, setUser] = useState<User | null>(null);
+
+  useEffect(() => {
+    // 当 getCurrentUser 解析时，检查是否为 undefined，如果是，则传递 null
+    getCurrentUser().then(fetchedUser => {
+      setUser(fetchedUser ?? null);
+    });
+  }, []);
+
   return (
     <header className="sticky top-0 z-40 w-full bg-background dark:border-slate-50/[0.06] lg:border-b lg:border-slate-900/10">
       <div className="container flex h-16 items-center px-4 sm:justify-between sm:space-x-0">
