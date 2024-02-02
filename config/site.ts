@@ -6,16 +6,12 @@ export const siteConfig = {
     "Beautifully designed components built with Radix UI and Tailwind CSS.",
   mainNav: [
     {
-      title: "首页",
-      href: "/",
-    },
-    {
       title: "构建智能体",
-      href: "/",
+      href: "https://chato.cn",
     }
   ],
   links: {
-    github: "https://github.com/lik778/web-island",
+    github: "https://github.com/baixing",
     docs: "",
   },
 }

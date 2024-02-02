@@ -44,7 +44,7 @@ export async function SiteHeader({ navItems }: SidebarProps) {
                     "px-4"
                   )}
                 >
-                  Login
+                    登录
                 </Link>
               )
             }

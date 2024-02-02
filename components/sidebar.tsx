@@ -23,7 +23,7 @@ export function Sidebar({ className, navItems }: SidebarProps) {
     });
   }, [activeTabId]);
   return (
-      <nav className="after:h-[calc(100vh - 65px)] block min-h-screen w-60 flex-row flex-nowrap  bg-background font-semibold sm:px-6 sm:pb-6">
+      <nav className="after:h-[calc(100vh - 65px)] block min-h-screen max-w-60 flex-row flex-nowrap  bg-background font-semibold sm:px-6 sm:pb-6">
         <a href="" className="mx-6 hidden h-16 flex-col items-center justify-center sm:flex">
           <Image
             src="https://afu-1255830993.cos.ap-shanghai.myqcloud.com/chato/test/upload/chato_image/avater/cb5c88616c60ebdbfd7fbfd990d7ef9e.png"
