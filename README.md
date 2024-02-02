@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://webnav.codefe.top/">
+  <a href="https://web-island-hazel.vercel.app/">
     <img alt="Example demo page" src="https://afu-1255830993.cos.ap-shanghai.myqcloud.com/chato/test/upload/chato_image/avater/cb5c88616c60ebdbfd7fbfd990d7ef9e.png" width="680">
   </a>
 </p>
@@ -26,7 +26,7 @@ Front-end navigation website, used to collect high-quality front-end related web
 ## Deploy Your Own
 You can clone & deploy it to Vercel with one click:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fwangfengyuan%2Ffrontend-nav&env=DATABASE_URL,GITHUB_CLIENT_ID,GITHUB_CLIENT_SECRET,GOOGLE_CLIENT_ID,GOOGLE_CLIENT_SECRET,NEXTAUTH_SECRET,NEXTAUTH_URL&envDescription=DATABASE_URL%E3%80%81CLIENT_ID%E3%80%81CLIENT_SECRET%20are%20used%20to%20store%20user%20infomation&demo-title=Front-end%20navigation%20website&demo-url=https%3A%2F%2Fwebnav.codefe.top%2F&demo-image=https%3A%2F%2Fcos.codefe.top%2Fimages%2Fwebnav-screenshot-demo.png)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/lik778/web-island&env=DATABASE_URL,GITHUB_CLIENT_ID,GITHUB_CLIENT_SECRET,GOOGLE_CLIENT_ID,GOOGLE_CLIENT_SECRET,NEXTAUTH_SECRET,NEXTAUTH_URL&project-name=web-island&repo-name=lik778s-projects)
 
 ## Todo
 - [x] Add tailwindcss
@@ -63,4 +63,17 @@ npx prisma db push
 
 ```sh
 pnpm dev
+```
+
+
+## Build failed?
+
+1. Check formatting
+
+2. Clear cache and reinstall
+
+```sh
+rm -rf node_modules
+rm pnpm-lock.yaml
+pnpm install
 ```
