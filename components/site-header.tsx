@@ -1,3 +1,4 @@
+"use client"
 import Link from "next/link"
 import { siteConfig } from "@/config/site"
 import { buttonVariants } from "@/components/ui/button"
@@ -18,6 +19,8 @@ interface User  {
 
 export function SiteHeader({ navItems }: SidebarProps) {
   const [user, setUser] = useState<User | null>(null);
+
+
 
   useEffect(() => {
     // 当 getCurrentUser 解析时，检查是否为 undefined，如果是，则传递 null
