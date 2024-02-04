@@ -1,30 +1,21 @@
-# 设置镜像
-FROM node:18-alpine
+# 使用 CentOS 7 作为基础镜像
+FROM centos:7
 
-# 安装必要的依赖
-RUN apk add --no-cache build-base python3 py3-pip autoconf automake libtool nasm libpng-dev vips-dev fftw-dev gcc g++ make libc6-compat
+# 安装 Node.js 18
+RUN curl -fsSL https://rpm.nodesource.com/setup_18.x | bash - \
+    && yum install -y nodejs
+
+# 安装 pnpm
+RUN npm install -g pnpm
 
 # 设置工作目录
 WORKDIR /app
 
-# 设置 npm 和 pnpm 使用阿里云的镜像源
-RUN npm config set registry https://registry.npmmirror.com && \
-    npm install -g pnpm && \
-    pnpm config set registry https://registry.npmmirror.com
+# 优化 Docker 层，复制 package 文件并安装依赖
+COPY package.json pnpm-lock.yaml ./
+RUN pnpm install --frozen-lockfile
 
-# 复制 package.json 和 pnpm-lock.yaml（如果有）
-COPY package*.json pnpm-lock.yaml* ./
-
-# 安装依赖
-RUN pnpm install
-
-# 复制所有文件到工作目录
+# 复制剩余的项目文件到工作目录
 COPY . .
 
-# 构建应用
-RUN npx prisma generate
-RUN pnpm run build
-
-CMD ["pnpm", "start"]
-
-EXPOSE 8080
+#
