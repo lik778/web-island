@@ -7,9 +7,11 @@ WORKDIR /app
 # 复制 package.json 和 package-lock.json（如果有）
 COPY package*.json ./
 
-# 安装依赖
-# 如果没有全局安装 pnpm，需要先安装它
-RUN npm install -g pnpm && pnpm install
+# 设置 npm 和 pnpm 使用阿里云的镜像源
+RUN npm config set registry https://registry.npmmirror.com && \
+    npm install -g pnpm && \
+    pnpm config set registry https://registry.npmmirror.com && \
+    pnpm install
 
 # RUN pnpm install -g prisma
 
