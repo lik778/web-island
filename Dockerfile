@@ -1,6 +1,9 @@
 # 设置镜像
 FROM node:18-alpine
 
+# 安装必要的依赖
+RUN apk add --no-cache build-base python3 py3-pip autoconf automake libtool nasm libpng-dev vips-dev fftw-dev gcc g++ make libc6-compat
+
 # 设置工作目录
 WORKDIR /app
 
