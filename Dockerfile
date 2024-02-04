@@ -8,14 +8,16 @@ WORKDIR /app
 COPY package*.json ./
 
 # 安装依赖
+# 如果没有全局安装 pnpm，需要先安装它
+RUN npm install -g pnpm && pnpm install
 
-RUN pnpm install
+# RUN pnpm install -g prisma
 
 # 复制所有文件到工作目录
 COPY . .
 
 # 构建应用
-RUN npx run generate
+RUN npx prisma generate
 
 RUN pnpm run build
 
