@@ -1,5 +1,5 @@
 # 设置镜像
-FROM node:18-bullseye-slim
+FROM node:18.19-slim
 
 # 设置工作目录
 WORKDIR /app
