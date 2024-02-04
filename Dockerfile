@@ -23,6 +23,6 @@ COPY . .
 RUN npx prisma generate
 RUN cnpm run build
 
-CMD ["cnpm", "cnpm", "start"]
+CMD ["cnpm", "run", "start"]
 
 EXPOSE 8080
