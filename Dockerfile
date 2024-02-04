@@ -1,5 +1,5 @@
 # 设置镜像
-FROM node18.19.0
+FROM node:18-alpine
 
 # 设置工作目录
 WORKDIR /app
