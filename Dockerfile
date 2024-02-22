@@ -25,4 +25,4 @@ RUN cnpm run build
 
 CMD ["cnpm", "run", "start"]
 
-EXPOSE 8080
+EXPOSE 3000
