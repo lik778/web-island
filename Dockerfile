@@ -25,7 +25,7 @@ COPY check-db-network.sh /check-db-network.sh
 RUN chmod +x /check-db-network.sh
 
 # 在容器启动时执行 check-db-network.sh 脚本
-CMD ["/check-db-network.sh", "db", "3306"]
+# CMD ["/check-db-network.sh", "db", "3306"]
 
 # 构建应用
 # RUN npx prisma generate
