@@ -16,13 +16,9 @@ RUN cnpm install
 # 复制所有文件到工作目录
 COPY . .
 
-# 复制并设置网络检查脚本的权限
-COPY check-db-network.sh /check-db-network.sh
-RUN chmod +x /check-db-network.sh
-
 # 构建应用（如果需要）
-# RUN npx prisma generate
-# RUN cnpm run build
+RUN npx prisma generate
+RUN cnpm run build
 
 # 暴露端口
 EXPOSE 8080
