@@ -56,7 +56,7 @@ function SoraDialog({ children, soraItem }: { children: React.ReactNode, soraIte
         <DialogHeader>
           {/* <DialogTitle>Are you absolutely sure?</DialogTitle> */}
           <DialogDescription>
-            <p>
+            <p className="max-sm:px-3">
             {soraItem.description}
             </p>
             <p className="mt-4">
@@ -72,6 +72,7 @@ function SoraDialog({ children, soraItem }: { children: React.ReactNode, soraIte
         muted
         preload="auto"
         poster={soraItem.icon}
+        style={{ maxHeight: '300px'}}
         >
           <source src={soraItem.url} type="video/mp4" />
           Your browser does not support the video tag.

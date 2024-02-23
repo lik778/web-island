@@ -15,7 +15,7 @@ export default async function SoraPage() {
     <h1 className="text-center text-4xl font-extrabold !leading-tight tracking-tight text-slate-900 dark:text-white sm:text-5xl lg:text-6xl">
       从文本创建视频
     </h1>
-    <p className="mx-auto mt-6 max-w-3xl text-center text-lg text-slate-600 dark:text-slate-400">
+    <p className="mx-auto max-sm:px-3 mt-6 max-w-3xl text-center text-lg text-slate-600 dark:text-slate-400">
       <code className="font-mono font-medium text-sky-500 dark:text-sky-400">Sora </code>
       是一个<code className="font-mono font-medium text-sky-500 dark:text-sky-400"> 人工智能模型</code>，
       可以根据文本指令创建逼真和富有想象力的场景。
