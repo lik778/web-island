@@ -5,14 +5,14 @@ import { Icons } from "@/components/icons"
 import { MainNav } from "@/components/main-nav"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { cn } from "@/lib/utils"
-import { getCurrentUser } from "@/lib/session"
+// import { getCurrentUser } from "@/lib/session"
 import { UserAccountNav } from "./user-account-nav"
 import { SidebarProps } from "./sidebar"
 
 import Image from "next/image"
 
-export async function SiteHeader({ navItems }: SidebarProps) {
-  const user = await getCurrentUser()
+export async function SiteHeader({ navItems, user }: SidebarProps) {
+  // const user = await getCurrentUser()
   return (
     <header className="z-40 w-full h-16 bg-background dark:border-slate-50/[0.06] lg:border-b lg:border-slate-900/10">
       <div className="container flex h-full items-center px-4 sm:justify-between sm:space-x-0">

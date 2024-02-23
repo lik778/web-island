@@ -57,13 +57,14 @@ export function MainNav({ items, navItems }: MainNavProps) {
                 {
                   items?.map((item, index) => (
                     <DropdownMenuItem
+                    key={item.href}
                     onClick={() => setMenuOpen(false)}
                     className={ isActive(item.href as string) ? 'bg-sky-500 dark:bg-sky-400' : '' }
                     >
                         {
                           !(item.href as string).includes('https') ? (
                             <Link
-                              key={index}
+                              key={item.href}
                               href={item.href as string}
                               className={cn(
                                 "flex items-center text-sm font-semibold text-muted-foreground hover:font-medium",
@@ -74,6 +75,7 @@ export function MainNav({ items, navItems }: MainNavProps) {
                               {item.title}
                             </Link>
                           ) : <a
+                            key={item.href}
                             href={item.href}
                             className={cn(
                               "flex items-center text-sm font-semibold text-muted-foreground hover:font-medium",
@@ -98,7 +100,7 @@ export function MainNav({ items, navItems }: MainNavProps) {
               (item, index) =>
                 !(item.href as string).includes('https') ? (
                   <Link
-                    key={index}
+                    key={item.href}
                     href={item.href as string}
                     className={cn(
                       "flex items-center text-sm font-semibold text-muted-foreground hover:font-medium",
@@ -109,6 +111,7 @@ export function MainNav({ items, navItems }: MainNavProps) {
                     {item.title}
                   </Link>
                 ) : <a
+                  key={item.href}
                   href={item.href}
                   className={cn(
                     "flex items-center text-sm font-semibold text-muted-foreground hover:font-medium",

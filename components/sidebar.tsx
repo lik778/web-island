@@ -4,11 +4,17 @@ import Image from "next/image"
 import { cn } from "@/lib/utils"
 import { useEffect, useState } from "react"
 import { Category } from "@prisma/client"
+import { User } from "@prisma/client"
 
 
 export interface SidebarProps {
   className?: string,
   navItems: Pick<Category, "title" | "icon" | "id">[],
+  user:  {
+    name?: string | null | undefined;
+    email?: string | null | undefined;
+    image?: string | null | undefined;
+} | undefined
 }
 
 export function Sidebar({ className, navItems }: SidebarProps) {
@@ -62,7 +68,7 @@ export function Sidebar({ className, navItems }: SidebarProps) {
                                 height={20}
                               />
                             </div>
-                            <span className="overflow-hidden text-ellipsis whitespace-nowrap">{category.title}</span>
+                            <span className="truncate">{category.title}</span>
                           </div>
                         </div>
                       )
