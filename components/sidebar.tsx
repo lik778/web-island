@@ -10,7 +10,7 @@ import { User } from "@prisma/client"
 export interface SidebarProps {
   className?: string,
   navItems: Pick<Category, "title" | "icon" | "id">[],
-  user:  {
+  user?:  {
     name?: string | null | undefined;
     email?: string | null | undefined;
     image?: string | null | undefined;

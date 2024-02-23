@@ -11,6 +11,7 @@ import { SidebarProps } from "./sidebar"
 
 import Image from "next/image"
 
+
 export function SiteHeader({ navItems, user }: SidebarProps) {
   // const user = await getCurrentUser()
   return (
