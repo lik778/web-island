@@ -11,6 +11,18 @@ datasource db {
   relationMode = "prisma"
 }
 
+model Sora {
+  id          String   @id @default(cuid())
+  icon        String
+  url         String
+  title       String   @db.Text
+  description String   @db.Text
+  createdAt   DateTime @default(now()) @map(name: "created_at")
+  updatedAt   DateTime @default(now()) @map(name: "updated_at")
+
+  @@map(name: "sora")
+}
+
 model Category {
   id          String   @id @default(cuid())
   icon        String

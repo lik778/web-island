@@ -5,7 +5,7 @@ const nextConfig = {
     appDir: true,
   },
   images: {
-    domains: ['afu-1255830993.cos.ap-shanghai.myqcloud.com', 'cos.codefe.top','qny-aichat.kanzhua.com'],
+    domains: ['afu-1255830993.cos.ap-shanghai.myqcloud.com', 'cos.codefe.top','qny-aichat.kanzhua.com', 'ai.baixing.net'],
   }
 }
 

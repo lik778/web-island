@@ -1,8 +1,7 @@
 import { Sidebar } from "@/components/sidebar"
 import getNavLinks from "./links"
-import { SiteHeader } from "@/components/site-header"
-import { SiteFooter } from "@/components/site-footer"
 import { LinkContent } from "@/components/link-content"
+import { SiteFooter } from "@/components/site-footer";
 
 export const revalidate = 24 * 60 * 60;
 
@@ -15,17 +14,14 @@ export default async function IndexPage() {
       id: n.id,
     }
   })
-  return <div className="container relative mx-auto min-h-screen w-full px-0">
-      <div className="flex">
-        <div className="fixed z-20 hidden min-h-screen w-[16rem] transition-all duration-300 ease-in-out sm:block">
+  return <div className="flex h-full">
+        <div className="hidden w-[16rem] flex-shrink-0 transition-all duration-300 ease-in-out sm:block">
          <Sidebar navItems={navItems} />
         </div>
-        <div className="w-full sm:pl-[16rem]">
+        <div id="link-content" className="h-full overflow-y-scroll scroll-smooth">
           {/* @ts-expect-error Async Server Component */}
-          <SiteHeader navItems={navItems} />
           <LinkContent navResources={navResources} />
-          <SiteFooter />
+          <SiteFooter/>
         </div>
       </div>
-    </div>
 }

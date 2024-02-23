@@ -1,14 +1,26 @@
 export type SiteConfig = typeof siteConfig
 
 export const siteConfig = {
-  name: "Next.js",
+  name: "高效AI",
   description:
-    "Beautifully designed components built with Radix UI and Tailwind CSS.",
+    "高效AI 你想要高效工具都在这",
   mainNav: [
     {
-      title: "构建智能体",
+      title: "探索首页",
+      href: "/",
+    },
+    {
+      title: "Sora 视界",
+      href: "/sora",
+    },
+    // {
+    //   title: "GPTS 探索",
+    //   href: "/gpts",
+    // },
+    {
+      title: "智能体工坊",
       href: "https://chato.cn",
-    }
+    },
   ],
   links: {
     github: "https://github.com/lik778/baixing",
