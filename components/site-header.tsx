@@ -11,7 +11,7 @@ import { SidebarProps } from "./sidebar"
 
 import Image from "next/image"
 
-export async function SiteHeader({ navItems, user }: SidebarProps) {
+export function SiteHeader({ navItems, user }: SidebarProps) {
   // const user = await getCurrentUser()
   return (
     <header className="z-40 w-full h-16 bg-background dark:border-slate-50/[0.06] lg:border-b lg:border-slate-900/10">
