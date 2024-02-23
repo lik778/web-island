@@ -60,7 +60,6 @@ export default async function RootLayout({ children }: RootLayoutProps) {
           <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <div className="container relative mx-auto h-screen overflow-hidden w-full px-0">
               {/* <div className="w-full"> */}
-                {/* @ts-expect-error Async Server Component */}
                 <SiteHeader navItems={navItems} />
                 <div style={{height: "calc(100% - 4rem)"}}>
                   {children}

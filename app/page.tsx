@@ -19,7 +19,6 @@ export default async function IndexPage() {
          <Sidebar navItems={navItems} />
         </div>
         <div id="link-content" className="h-full overflow-y-scroll scroll-smooth">
-          {/* @ts-expect-error Async Server Component */}
           <LinkContent navResources={navResources} />
           <SiteFooter/>
         </div>
