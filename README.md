@@ -5,8 +5,10 @@
 </p>
 
 ## 高效岛
-
-Front-end navigation website, used to collect high-quality front-end related websites from both domestic and foreign sources for convenient personal use
++ 首页
+![alt](./readme/home.png)
++ sora 视界
+![alt](./readme/sora.png)
 
 > This project is highly inspired by [Taxonomy](https://github.com/shadcn/taxonomy), For learning purpose, to learn how to build a modern app using Next.js 13(with many features like authentication, API routes, static pages for docs, orm, ...etc)
 

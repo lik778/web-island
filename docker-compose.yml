@@ -1,0 +1,36 @@
+version: '2.4'
+services:
+  db:
+    image: mysql:5.7
+    environment:
+      - MYSQL_DATABASE=taxonomy
+      - MYSQL_ROOT_PASSWORD=baixing123
+    ports:
+      - "3306:3306"
+    volumes:
+      - db-data:/var/lib/mysql
+    restart: always
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      timeout: 20s
+      retries: 10
+      interval: 10s
+    networks:
+      - default
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    networks:
+      - default
+    depends_on:
+      db:
+        condition: service_healthy
+
+networks:
+  default:
+    external:
+      name: web-island_default
+
+volumes:
+  db-data:
